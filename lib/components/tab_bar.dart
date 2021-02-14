@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-
+import '../screens/all_books.dart';
+import '../screens/home.dart';
 
 class MainTabController extends StatelessWidget {
   static const tabs = [
@@ -17,12 +18,12 @@ class MainTabController extends StatelessWidget {
       initialIndex: 0,
       child: Scaffold(
         appBar: AppBar(
-          title: Text('A Year In Books'), bottom: TabBar(tabs: tabs)
+          title: Text('a year in books'), bottom: TabBar(tabs: tabs)
         ),
         body: TabBarView(
           children: [
-            Text('Home'),
-            Text('All Books'),
+            HomeScreen(),
+            AllBooksScreen(),
             Text('Search'),
           ],
         )
